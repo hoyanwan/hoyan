@@ -6,115 +6,44 @@ using namespace std;
 
 int main()
 {
-	//int guest1;
-	//int guest2;
-	//int guest3;
-	//int guest4;
-	//int guest5;
-
 	int guest;
 	int chance = 8;
 
 	srand(time(nullptr));
 
+	//set the answer between 1 to 1000
 	int answer = rand() % 1000 + 1;
 
 	cout << answer << endl;
 
-	//cout << "guest a number between 1 and 100" << endl;
-
+	//while we still have chance
 	while (chance > 0)
 	{
+		//we are allow to guest
 		cout << "guest a number between 1 and 100" << endl;
 		cin >> guest;
 
+		//if we guest it right
 		if (guest == answer)
 		{
+			//we win
 			cout << "you win" << endl;
 			system("pause");
 			return 0;
 		}
+
+		//if not
 		if (guest != answer)
 		{
+			//we go to guest again
 			cout << "you guest wrong" << endl;
 			chance--;
 			cout << "you have " << chance << " chance left" << endl;
 		}
 	}
 	
+	//if we don't have chance anymore, it is gameover
 	cout << "gameover" << endl;
 	system("pause");
 	return 0;
-
-	//cin >> guest1;
-
-	//if (guest1 == answer)
-	//{
-	//	cout << "you guest it" << endl;
-	//	system("pause");
-	//	return 0;
-	//}
-	//if (guest1 != answer)
-	//{
-	//	cout << "you guest wrong" << endl;
-	//	cout << "try to guest again, you have 4 tries left" << endl;
-	//	cin >> guest2;
-	//}
-
-
-	//if (guest2 == answer)
-	//{
-	//	cout << "you guest it" << endl;
-	//	system("pause");
-	//	return 0;
-	//}
-	//if (guest2 != answer)
-	//{
-	//	cout << "you guest wrong" << endl;
-	//	cout << "try to guest again, you have 3 tries left" << endl;
-	//	cin >> guest3;
-	//}
-
-
-	//if (guest3 == answer)
-	//{
-	//	cout << "you guest it" << endl;
-	//	system("pause");
-	//	return 0;
-	//}
-	//if (guest3 != answer)
-	//{
-	//	cout << "you guest wrong" << endl;
-	//	cout << "try to guest again, you have 2 tries left" << endl;
-	//	cin >> guest4;
-	//}	
-	//
-
-	//if (guest4 == answer)
-	//{
-	//	cout << "you guest it" << endl;
-	//	system("pause");
-	//	return 0;
-	//}
-	//if (guest4 != answer)
-	//{
-	//	cout << "you guest wrong" << endl;
-	//	cout << "try to guest again, you have 1 tries left" << endl;
-	//	cin >> guest5;
-	//}
-
-
-	//if (guest5 == answer)
-	//{
-	//	cout << "you guest it" << endl;
-	//	system("pause");
-	//	return 0;
-	//}
-	//if (guest5 != answer)
-	//{
-	//	cout << "you guest wrong" << endl;
-	//	cout << "gameover" << endl;
-	//	system("pause");
-	//	return 0;
-	//}
 }
