@@ -13,11 +13,11 @@ int main()
 	//int guest5;
 
 	int guest;
-	int chance = 5;
+	int chance = 8;
 
 	srand(time(nullptr));
 
-	int answer = rand() % 100 + 1;
+	int answer = rand() % 1000 + 1;
 
 	cout << answer << endl;
 
